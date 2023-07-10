@@ -3,10 +3,10 @@ import imageUrlBuilder from "@sanity/image-url";
 import { SanityImageSource } from "@sanity/image-url/lib/types/types";
 
 const config = {
-  projectId: "u0l2qcbb",
-  dataset: "production",
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || "",
+  dataset: process.env.NEXT_PUBLIC_SANITY_PROJECT_DATASET || "",
   apiVersion: "2023-03-04",
-  useCdn: false,
+  useCdn: true,
   token: process.env.NEXT_PUBLIC_SANITY_TOKEN,
 };
 export default config;
