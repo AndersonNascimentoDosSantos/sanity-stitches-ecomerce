@@ -7,7 +7,7 @@ const product: SchemaTypeDefinition = {
   fields: [
     {
       name: "image",
-      title: "Image",
+      title: "Imagem",
       type: "array",
       of: [{ type: "image" }],
       options: {
@@ -16,7 +16,7 @@ const product: SchemaTypeDefinition = {
     },
     {
       name: "name",
-      title: "Name",
+      title: "Nome",
       type: "string",
     },
     {
@@ -30,12 +30,12 @@ const product: SchemaTypeDefinition = {
     },
     {
       name: "price",
-      title: "Price",
+      title: "Preço",
       type: "number",
     },
     {
       name: "details",
-      title: "Details",
+      title: "Detalhes",
       type: "string",
     },
   ],
