@@ -2,6 +2,13 @@ import { createStitches, globalCss } from "@stitches/react";
 
 export const { styled, getCssText, css } = createStitches({
   theme: {
+    breakpoints: {
+      xs: "640px",
+      sm: "768px",
+      md: "1024px",
+      lg: "1280px",
+    },
+
     fonts: {
       system: "Inter, apple-system, sans-serif",
     },
@@ -27,7 +34,7 @@ export const { styled, getCssText, css } = createStitches({
       2: "36px",
       3: "30px",
       4: "20px",
-      5: "'18px'",
+      5: "18px",
       6: "16px",
       7: "12px",
     },
@@ -81,15 +88,15 @@ export const globalStyles = globalCss({
     minHeight: "100vh",
     textRendering: "optimizeSpeed",
     lineHeight: 1.5,
-    main: {
-      minHeight: "100vh",
-      padding: "4rem 0",
-      flex: 1,
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      alignItems: "center",
-    },
+    // main: {
+    //   minHeight: "100vh",
+    //   padding: "4rem 0",
+    //   flex: 1,
+    //   display: "flex",
+    //   flexDirection: "column",
+    //   justifyContent: "center",
+    //   alignItems: "center",
+    // },
   },
   "a:not([class])": {
     textDecorationSkipInk: "auto",
@@ -114,7 +121,7 @@ export const globalStyles = globalCss({
   },
 
   ".main-container": {
-    maxWidth: "1400px",
+    maxWidth: "1280px",
     margin: "auto",
     width: "100%",
   },
@@ -163,101 +170,16 @@ export const globalStyles = globalCss({
     fontWeight: 600,
   },
   ".products-container": {
-    display: "flex",
-    flexWrap: "wrap",
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit,minmax(250px,1fr))",
     justifyContent: "center",
+    alignItems: "center",
     gap: "15px",
     marginTop: "20px",
     width: "100%",
-  },
-  ".product-card": {
-    cursor: "pointer",
-    transform: "scale(1, 1)",
-    transition: "transform 0.5s ease",
-    color: "#324d67",
-    ":hover": {
-      transform: "scale(1.1,1.1)",
-    },
-  },
-
-  ".product-image": {
-    borderRadius: "15px",
-    backgroundColor: "#ebebeb",
-    transform: "scale(1, 1)",
-    transition: "transform 0.5s ease",
-  },
-
-  ".product-name": {
-    fontWeight: 500,
-  },
-  ".product-price": {
-    fontWeight: 800,
-    marginTop: "6px",
-    color: "black",
-  },
-
-  ".hero-banner-container": {
-    padding: "100px 40px",
-    backgroundColor: "#dcdcdc",
-    borderRadius: "15px",
-    position: "relative",
-    height: "500px",
-    lineHeight: "0.9",
-    width: "100%",
-    ".beats-solo": {
-      fontSize: "20px",
-    },
-    button: {
-      borderRadius: "15px",
-      padding: "10px 16px",
-      backgroundColor: "#f02d34",
-      color: "white",
-      border: "none",
-      marginTop: "40px",
-      fontSize: "18px",
-      fontWeight: 500,
-      cursor: "pointer",
-      zIndex: "10000 !important",
-    },
-
-    h3: {
-      fontSize: "4rem",
-      marginTop: "4px",
-    },
-    h1: {
-      color: "white",
-      fontSize: "9em",
-      marginLeft: "-20px",
-      textTransform: "uppercase",
-    },
-    ".hero-banner-image": {
-      position: "absolute",
-      top: "0%",
-      right: "0%",
-      width: "350px",
-      height: "350px",
-    },
-    ".desc": {
-      position: "absolute",
-      right: "10%",
-      bottom: "5%",
-      width: "300px",
-      lineHeight: "1.3",
-      display: "flex",
-      flexDirection: "column",
-      color: "#324d67",
-      p: {
-        color: "#5f5f5f",
-        fontWeight: 100,
-        textAlign: "end",
-      },
-      h5: {
-        marginBottom: "12px",
-        fontWeight: 700,
-        fontSize: "16px",
-        /* color: black, */
-        alignSelf: "flex-end",
-      },
+    div: {
+      padding: "0.5rem",
+      // margin: "0 auto",
     },
   },
 
@@ -272,66 +194,6 @@ export const globalStyles = globalCss({
     p: {
       fontSize: "16px",
       fontWeight: 200,
-    },
-  },
-
-  ".footer-banner-container": {
-    padding: "100px 40px",
-    backgroundColor: "#f02d34",
-    borderRadius: "15px",
-    position: "relative",
-    height: "400px",
-    lineHeight: 1,
-    color: "white",
-    width: "100%",
-    marginTop: "120px",
-    ".banner-desc": {
-      display: "flex",
-      justifyContent: "space-between",
-      button: {
-        borderRadius: "15px",
-        padding: "10px 16px",
-        backgroundColor: "white",
-        color: "red",
-        border: "none",
-        marginTop: "40px",
-        fontSize: "18px",
-        fontWeight: 500,
-        cursor: "pointer",
-      },
-      ".left": {
-        h3: {
-          fontWeight: 900,
-          fontSize: "80px",
-          marginLeft: "25px",
-        },
-        p: {
-          margin: "18px",
-        },
-      },
-      ".right": {
-        lineHeight: 1.4,
-
-        h3: {
-          fontWeight: 800,
-          fontSize: "60px",
-        },
-        p: {
-          fontSize: "18px",
-        },
-        ".company-desc": {
-          fontSize: "14px",
-          fontWeight: 300,
-        },
-      },
-    },
-    ".footer-banner-image": {
-      position: "absolute",
-      /* top: -35%,
-      left: 8%, */
-      top: "-25%",
-      left: "25%",
-      width: "350px",
     },
   },
 
@@ -352,24 +214,6 @@ export const globalStyles = globalCss({
     float: "right",
     padding: "40px 10px",
     position: "relative",
-  },
-
-  ".footer-container": {
-    color: "#324d67",
-    textAlign: "center",
-    marginTop: "20px",
-    padding: "30px 10px",
-    fontWeight: 700,
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    gap: "10px",
-    justifyContent: "center",
-    ".icons": {
-      fontSize: "30px",
-      display: "flex",
-      gap: "10px",
-    },
   },
 
   ".cart-heading": {
@@ -686,57 +530,9 @@ export const globalStyles = globalCss({
     marginTop: "10px",
   },
 
-  "@media screen and (maxWidth: 800px)": {
-    ".hero-banner-image": {
-      width: "77%",
-      height: "62%",
-      top: "-2%",
-      right: "-6%",
-    },
-    ".footer-banner-container": {
-      height: "560px",
-      marginTop: "80px",
-    },
-    ".footer-banner-image": {
-      width: "77%",
-      left: "30%",
-      top: "6%",
-      height: "56%",
-    },
-    ".banner-desc .left h3": {
-      fontWeight: "900",
-      fontSize: "50px",
-      marginLeft: "5px",
-    },
-    ".banner-desc .left p": {
-      margin: "'18px'",
-    },
-    ".banner-desc .right h3": {
-      fontSize: "45px",
-    },
-    ".banner-desc .right p": {
-      fontSize: "'18px'",
-    },
-    ".banner-desc .right .company-desc": {
-      fontSize: "14px",
-    },
-    ".banner-desc": {
-      flexWrap: "wrap",
-      gap: "20px",
-    },
-    ".hero-banner-container": {
-      height: "560px",
-      lineHeight: "1.3",
-      h1: {
-        fontSize: "50px",
-      },
-      h3: {
-        fontSize: "40px",
-      },
-      button: {
-        marginTop: "90px",
-        zIndex: "10000",
-      },
+  "@media (maxWidth: 800px)": {
+    "h1, h2, h3, h4": {
+      fontSize: "1rem",
     },
 
     ".desc": {
