@@ -1,7 +1,7 @@
 import { styled } from "../../stitches.config";
 
 export const Main = styled("main", {
-  maxWidth: "1400px",
+  maxWidth: "1200px",
   margin: "auto",
   width: "100%",
 });

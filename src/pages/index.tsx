@@ -4,7 +4,7 @@ import { Key } from "react";
 import { FooterBanner, HeroBanner, Product } from "../components";
 
 const Home = ({ products, bannerData }: any) => (
-  <div>
+  <>
     <HeroBanner heroBanner={bannerData.length && bannerData[0]} />
     <div className="products-heading">
       <h2>Best Seller Products</h2>
@@ -18,14 +18,14 @@ const Home = ({ products, bannerData }: any) => (
     </div>
 
     <FooterBanner footerBanner={bannerData && bannerData[0]} />
-  </div>
+  </>
 );
 
 export const getServerSideProps = async () => {
   const query = groq`*[_type == "product"]`;
   const products = await client.fetch(query);
 
-  const bannerQuery = groq`*[_type == "banner"]`;
+  const bannerQuery = groq`*[_type == "banner"] | order(_createdAt desc)`;
   const bannerData = await client.fetch(bannerQuery);
 
   return {

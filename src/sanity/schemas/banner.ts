@@ -7,7 +7,7 @@ const banner: SchemaTypeDefinition = {
   fields: [
     {
       name: "image",
-      title: "Image",
+      title: "Imagem",
       type: "image",
       options: {
         hotspot: true,
@@ -15,7 +15,7 @@ const banner: SchemaTypeDefinition = {
     },
     {
       name: "buttonText",
-      title: "ButtonText",
+      title: "Texto do Botão",
       type: "string",
     },
     {
@@ -25,37 +25,37 @@ const banner: SchemaTypeDefinition = {
     },
     {
       name: "desc",
-      title: "Desc",
+      title: "Descrição",
       type: "string",
     },
     {
       name: "smallText",
-      title: "SmallText",
+      title: "CTA 01",
       type: "string",
     },
     {
       name: "midText",
-      title: "MidText",
+      title: "CTA 02",
       type: "string",
     },
     {
       name: "largeText1",
-      title: "LargeText1",
+      title: "CTA 03",
       type: "string",
     },
     {
       name: "largeText2",
-      title: "LargeText2",
+      title: "CTA 04",
       type: "string",
     },
     {
       name: "discount",
-      title: "Discount",
+      title: "Desconto",
       type: "string",
     },
     {
       name: "saleTime",
-      title: "SaleTime",
+      title: "Periodo de venda",
       type: "string",
     },
   ],
